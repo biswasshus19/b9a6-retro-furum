@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 06</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- tailwind & daisyUI  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-mulish mt-5">
+    <header class="container mx-auto mt-2">
+      <nav class="flex justify-between">
+        <div>
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div>
+          <div class="flex gap-6 tooltip">
+            <div class="tooltip" data-tip="Home">
+              <img
+                class="border-2 hover:cursor-pointer p-4 rounded-full"
+                data-tip="home"
+                src="images/Home.png"
+                alt="home"
+              />
+            </div>
+            <div class="tooltip" data-tip="tooltip">
+              <img
+                class="border-2 hover:cursor-pointer p-4 rounded-full"
+                src="images/pen.png"
+                alt="tooltip"
+              />
+            </div>
+            <div class="tooltip" data-tip="Users">
+              <img
+                class="border-2 hover:cursor-pointer p-4 rounded-full"
+                src="images/add.png"
+                alt="commit"
+              />
+            </div>
+            <div class="tooltip" data-tip="Flag">
+              <img
+                class="border-2 hover:cursor-pointer p-4 rounded-full"
+                src="images/flag.png"
+                alt="flag"
+              />
+            </div>
+            <button
+              class="border-2 px-7 rounded-lg text-2xl font-mulish font-medium bg-blue-500 text-white ml-12"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto">
+      <!-- banner section start -->
+      <div class="mt-8">
+        <div class="bg-[url('images/bannar.png')] h-[24rem] rounded-3xl">
+          <div class="grid grid-cols-2">
+            <div class="mt-8">
+              <h1 class="lg:text-6xl text-white font-bold text-center">
+                Wellcome to the
+                <br />
+                <span class="text-[#2d4afd]">ReTro</span>
+                Forum
+              </h1>
+              <p class="text-white lg:font-bold text-center">
+                share your favorite opinion and win and wp <br />
+                forum coffee mug!
+              </p>
+              <div
+                class="bg-white ml-2 lg:mr-12 rounded-2xl lg:ml-28 lg:pl-6 mt-8 inline-flex"
+              >
+                <input
+                  class="outline-none mx-5"
+                  type="search"
+                  name=""
+                  id="search-input"
+                  placeholder="Search here anything"
+                />
+                <button id="search-btn" onclick="handleSearch()"
+                  class="lg:py-3 px-7 ml- rounded-2xl my-1 text-white font-bold bg-blue-500 px"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+            <div class="bg-white p-12 border mx-28 mt-20 rounded-3xl">
+              <div class="flex justify-between">
+                <h3 class="font-medium">Registered Users</h3>
+                <h1>01</h1>
+              </div>
+              <div class="flex justify-between">
+                <h3 class="font-medium">Forum</h3>
+                <h1>05</h1>
+              </div>
+              <div class="flex justify-between">
+                <h3 class="font-medium">Topics</h3>
+                <h1>01</h1>
+              </div>
+              <div class="flex justify-between">
+                <h3 class="font-medium">Replies</h3>
+                <h1>01</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end banner section  -->
+      </div>
+      <!-- discuss section start  -->
+      <section">
+        <div class="mt-12 mb-10">
+          <h1 class="text-4xl font-extrabold text-center">Let's Discuss</h1>
+          <p class="mt-4 text-center">
+            
+Of course! What would you like to discuss? We can talk about a wide range of topics including <br> science, technology, philosophy, literature, <br> current events, or anything else you're interested in. Just let me know what's on your mind!
+          </p>
+        </div>
+        <!-- js document function part -->
+        <div class="grid grid-cols-2 ">
+          <!-- first -->
+          <div id="container-data">
+            
+          </div>
+          <!-- second -->
+          <div class="bg-gray-200 rounded-3xl mx-24">
+            <div class="flex px-8 pt-3 items-center justify-around">
+              <h1 class="font-bold text-xl">Title</h1>
+              <h1 class="flex opacity-70">
+                <img class="mr-2" src="images/title.png" alt="s" />
+                Mark as read (<span>a</span>)
+              </h1>
+            </div>
+            <div id="right-side-span" class="grid grid-cols-2 gap-6 items-center bg-white mx-7 px-3 rounded-lg">
+                
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- join forum section start -->
+      <section class="my-8">
+        <div class="bg-[#12132D] h-[25rem] rounded-2xl flex justify-around">
+          <div class="items-center justify-center text-center mt-20 space-y-8">
+            <h1 class="text-white font-extrabold text-5xl">Join Our Forum</h1>
+            <p class="text-white font">
+            To join the forum, simply navigate to the registration page and fill out the required <br> information. Once registered, you'll gain access to a wealth of discussions <br> and resources on your favorite retro topics.
+            </p>
+            <button
+              class="text-white border-2 px-12 py-3 bg-blue-500 text-xl font-bold rounded-3xl"
+            >
+              Registered Now
+            </button>
+          </div>
+          <div>
+            <img class="pt-14" src="images/joinforum.png" alt="" />
+          </div>
+        </div>
+        <!-- end -->
+      </section>
+      <!-- latest post section  -->
+      <section>
+        <div>
+          <h1 class="text-4xl font-extrabold text-center">Latest Posts</h1>
+          <p class="font-medium text-center mt-4">
+            
+I'm sorry, but I can't access or browse the internet, including social media platforms, to retrieve <br> the latest posts. However, if you'd like to discuss recent events, news, or trends, feel free to <br> provide some context or specific topics you're interested in, and I'll do my best to engage in <br>a meaningful discussion based on the information I have up to my last training data in January 2022.
+          </p>
+        </div>
+        <!-- latest post dynamic section  -->
+        <!-- start -->
+        <div id="second-container" class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        </div> 
+        </div>
+        <!-- end -->
+      </section>
+    </main>
+    <footer class="mt-12">
+      <section>
+        <div class="bg-slate-100 h-[26rem]">
+          <div class="items-center text-center pt-16 space-y-3">
+            <h1 class="font-extrabold text-4xl">ReTro</h1>
+            <p>
+              Could you please provide more context or clarify what you mean by <br> "ReTro"? Are you referring to a specific topic, <br> concept, or something else entirely? Once I have a bit more information, I'll be better <br> equipped to engage in the discussion with you.
+            </p>
+            <p></p>
+          </div>
+
+          <div class="flex gap-12 items-center justify-center mt-12 mb-6">
+            <a
+              href="https://www.facebook.com/shusmitabiswas.tonu/"
+              ><img src="images/facebook.png" alt="facebook"
+            /></a>
+            <a href="https://www.instagram.com/shusmitabiswas6/"
+              ><img src="images/instagram.png" alt="instagram"
+            /></a>
+            <a href="https://github.com/biswasshus19"
+              ><img src="images/github.png" alt="github"
+            /></a>
+            <a href="https://twitter.com/i/flow/login"
+              ><img src="images/Twitter.png" alt="twitter"
+            /></a>
+          </div>
+          <hr/>
+          <div>
+            <h4 class="text-center font-medium opacity-85 mt-12">
+              2024.All Right Reserved
+            </h4>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
